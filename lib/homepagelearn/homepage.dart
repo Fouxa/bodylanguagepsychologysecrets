@@ -104,7 +104,7 @@ import '../settings_page.dart';
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-
+//
                                     Container(
                                       height:  height/7.0,
                                       width: height/7.0,
