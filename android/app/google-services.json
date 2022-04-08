@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124395529592",
+    "project_id": "bodylanguagepsychologyios",
+    "storage_bucket": "bodylanguagepsychologyios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124395529592:android:0f1a49bda602010d97948d",
+        "android_client_info": {
+          "package_name": "com.fouxa.bodylanguagepsychologysecrets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124395529592-drqo5ihien8u8dsmrs0vl603k6445tfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZbx3tTbvv1u8rDSvPiE76uVgWMitbMUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124395529592-drqo5ihien8u8dsmrs0vl603k6445tfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

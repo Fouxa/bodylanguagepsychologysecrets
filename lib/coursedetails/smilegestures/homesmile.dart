@@ -10,8 +10,11 @@ import 'package:bodylanguagepsychologysecrets/coursedetails/smilegestures/twosmi
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bodylanguagepsychologysecrets/custom_widgets.dart';
+
+import '../../homepagelearn/model/category.dart';
 
 class smileScreen extends StatelessWidget {
   @override
@@ -20,68 +23,38 @@ class smileScreen extends StatelessWidget {
 
     return Scaffold(
 
+
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        //  brightness: Brightness.light,
+        elevation: 0,
+        centerTitle: true,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.grey,
+          ),
+        ),
+      ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 
       body:
-
-
       Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.transparent,
-           image: DecorationImage(
-            image: CachedNetworkImageProvider('https://i.ibb.co/2d5xxKt/Frame-3.png'),
-            fit: BoxFit.contain,
-            alignment: Alignment.bottomCenter,
-          ),
         ),
-
-
         child:
-
-
         Column(
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: height/20, right: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.arrow_back_ios,
+            DetailsImage(categories[3].image, height/5, height/5, Theme.of(context).scaffoldBackgroundColor,3),
 
-                        ),
-                      ),
-
-                    ],
-                  ),
-
-
-                  TextLiquidFill(
-                    text: 'Smile and laughter',
-                    waveDuration: Duration(milliseconds: 1000),
-                    loadDuration: Duration(milliseconds: 1000),
-                    waveColor: Colors.purple,
-                    boxBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                    textStyle:GoogleFonts.pacifico(fontSize: height/17,color: Colors.purple),
-                    boxHeight: 100.0,
-                  ),
-
-
-
-
-
-
-                ],
-              ),
-            ),
+            SizedBox(height: 15,),
+            Text("Sneaky Smile Cues",style:GoogleFonts.comicNeue(fontSize: height/25,color: Colors.purple,fontWeight: FontWeight.bold),) ,
+            SizedBox(height: 15,),
 
             Expanded(
               child: Container(

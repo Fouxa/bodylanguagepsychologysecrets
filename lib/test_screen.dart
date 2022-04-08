@@ -26,13 +26,39 @@ class testScreen extends StatelessWidget {
 
 
       body:
+
+      NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            SliverAppBar(
+
+              elevation: 0,
+              backgroundColor:Colors.grey.withOpacity(0.1) ,
+              centerTitle: true,
+
+
+              title: Text("Quiz", style: GoogleFonts.comicNeue(fontSize: 25,color: Theme.of(context).iconTheme.color,fontWeight: FontWeight.bold),),
+
+              bottom: PreferredSize(
+                child: Container(),
+                preferredSize: Size(0.0, 10),
+              ),
+
+              pinned: false,
+              floating: true,
+              forceElevated: innerBoxIsScrolled,
+
+            ),
+          ];
+        },
+        body:
       ListView(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           children: <Widget>[
 
             Container(
-              margin: EdgeInsets.only(  top: 5,  ),
+
 
               decoration: BoxDecoration(
 
@@ -503,6 +529,14 @@ class testScreen extends StatelessWidget {
 
           ]
       ),
+
+
+
+
+    ),
+
+
+
 
     );
   }

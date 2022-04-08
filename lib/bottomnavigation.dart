@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:bodylanguagepsychologysecrets/articles_philosophy/pages/explore_page.dart';
 import 'package:bodylanguagepsychologysecrets/homepagelearn/homepage.dart';
-import 'package:bodylanguagepsychologysecrets/result/result.dart';
-import 'package:bodylanguagepsychologysecrets/settings_page.dart';
+ import 'package:bodylanguagepsychologysecrets/settings_page.dart';
 
 import 'package:bodylanguagepsychologysecrets/test_screen.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                   //  MapsPage(),
                   testScreen(),
 
-resultscreen(),
+                  ExplorePage(),
                   settingsPage()
 
 

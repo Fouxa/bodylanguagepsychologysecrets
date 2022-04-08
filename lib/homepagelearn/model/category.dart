@@ -57,53 +57,60 @@ class Category {
 List<Category> categories = [
 
   Category(
-    name: "Day 1: Secret of hands",
+    name: "DAY 1: Secret of hands",
     widget: DetailsScreen(),
     numOfCourses: 7,
-    image: "https://i.ibb.co/4FrgXjW/hand-compressed.png",
+    image: "https://i.ibb.co/nDdr5wd/hand.png",
     ),
 
   Category(
-    name: "Day 2: Eye signals",
+    name: "DAY 2: Hidden Eye Signals",
     widget: eyeScreen(),
     numOfCourses: 7,
-    image: "https://i.ibb.co/1Mp2SwY/eye-compressed.png",
+    image: "https://i.ibb.co/6NS8jh9/eye.png",
   ),
 
   Category(
-    name: "Day 3: Arm indications",
+    name: "DAY 3: Invisible Arm Indications",
     widget: armScreen(),
     numOfCourses: 10,
-    image: "https://i.ibb.co/Vg7bCKW/arm.png",
+    image: "https://i.ibb.co/d5CY3zd/arm.png",
   ),
 
   Category(
-    name: "Day 4: Smile and laughter",
+    name: "DAY 4: Sneaky Smile Cues",
     widget: smileScreen(),
     numOfCourses: 7,
-    image: "https://i.ibb.co/NTNzhBQ/smile-compressed.png",
+    image: "https://i.ibb.co/Lg9zn3D/smile.png",
   ),
 
 
   Category(
-    name: "Day 5: Know from legs",
+    name: "DAY 5: Know From Legs",
     widget: legScreen(),
     numOfCourses: 8,
-    image: "https://i.ibb.co/D7bFQTr/leg-compressedexp.png",
+    image: "https://i.ibb.co/M2hWMtR/leg.png",
   ),
 
   Category(
-    name: "Day 6: Common gestures",
+    name: "DAY 6: Cryptic Common Gestures",
     widget:  cmnScreen(),
     numOfCourses: 6,
-    image: "https://i.ibb.co/Y3qtHYr/pexels-photo-1036627.png",
+    image: "https://i.ibb.co/P69z8B9/common.png",
   ),
 
   Category(
-    name: "Day 7: Deceit          Signals",
+    name: "DAY 7: Disguised Deceit signals",
     widget:dctScreen(),
     numOfCourses: 6,
-    image: "https://i.ibb.co/W6TCPvv/pexels-photo-3124851-1.png",
+    image: "https://i.ibb.co/nL24Q1q/deceit.png",
+  ),
+
+  Category(
+    name: "Bonus Body language tips",
+    widget:dctScreen(),
+    numOfCourses: 6,
+    image: "https://i.ibb.co/yBv4cm3/extra.png",
   ),
 
 

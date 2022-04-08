@@ -1,4 +1,4 @@
-package com.example.bodylanguagepsychologysecrets
+package com.fouxa.bodylanguagepsychologysecrets
 
 import io.flutter.embedding.android.FlutterActivity
 

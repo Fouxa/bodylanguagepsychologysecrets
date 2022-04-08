@@ -1,10 +1,76 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:bodylanguagepsychologysecrets/homepagelearn/constants.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
+import 'homepagelearn/model/category.dart';
+
 Color title = Color.fromRGBO(255, 88, 100, 1);
+
+
+
+DetailsImage(String detailsImageLink, double height, double width, Color backgroundColor , int index){
+  return
+    Padding(
+      padding: EdgeInsets.only(left: 20, right: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height:  height,
+                width: height,
+                padding: EdgeInsets.all(5),
+
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey.withOpacity(0.2),
+                      width: 3
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      blurRadius: 20,
+                      spreadRadius: 15,
+                      offset: const Offset(6, 15),
+                    ),
+                  ],
+
+                  //     borderRadius: BorderRadius.circular(100.0),
+                  //   color: Theme.of(context).hintColor,
+                  color: backgroundColor,
+                  shape: BoxShape.circle,
+                ),
+                child:
+
+                    Hero(
+                      tag: categories[index],
+                      child:
+                CachedNetworkImage(
+                  fit: BoxFit.cover,
+                  imageUrl: detailsImageLink,
+                  placeholder: (context, url) =>
+                      SizedBox(
+                        child: BlurHash(hash: "L5H2EC=PM+yV0g-mq.wG9c010J}I"),
+                      ),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
+
+      ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+}
+
+
 
 OnlineImage2(String ImageLink,  ){
   return Center(
@@ -17,7 +83,7 @@ OnlineImage2(String ImageLink,  ){
           borderRadius: BorderRadius.all(
             Radius.circular(5),
           ),
-          border: Border.all(color: Color.fromRGBO(255, 88, 100, 0.4), width: 4),
+          border: Border.all(color: Colors.purple.withOpacity(0.3), width: 4),
 
         ),
         child: CachedNetworkImage(
@@ -34,6 +100,7 @@ OnlineImage2(String ImageLink,  ){
 
   );
 }
+
 
 OnlineImage(String ImageLink,  ){
   return Container(
@@ -104,7 +171,7 @@ class CourseContent extends StatelessWidget {
               number,
               style: kHeadingextStyle.copyWith(
                 color: Colors.purple,
-                fontSize: height/25,
+                fontSize: height/30,
               ),
             ),
             SizedBox(width: 20),
@@ -115,13 +182,13 @@ class CourseContent extends StatelessWidget {
                     text: "$duration mins read\n",
                     style: TextStyle(
                       color: Theme.of(context).iconTheme.color,
-                      fontSize: height/45,
+                      fontSize: height/47,
                     ),
                   ),
                   TextSpan(
                     text: title,
                     style: TextStyle(
-                      fontSize: height/45,
+                      fontSize: height/47,
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).iconTheme.color,
                     )
@@ -133,8 +200,8 @@ class CourseContent extends StatelessWidget {
 
             Container(
               margin: EdgeInsets.only(left: 20),
-              height: width/10,
-              width: width/10,
+              height: width/12,
+              width: width/12,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.purple,
@@ -157,7 +224,9 @@ buildTextTitleVariation2(String text,double fontsizenumber   ){
     padding: EdgeInsets.only(bottom: 16),
     child: Text(
       text,
+      textAlign: TextAlign.justify,
       style: TextStyle(
+
         fontSize: fontsizenumber,
         fontWeight: FontWeight.bold,
       //  color:   ? Colors.white :  Colors.purple,
@@ -171,6 +240,7 @@ buildTextSubTitleVariation1(String text,double fontsizenumber  ){
     padding: EdgeInsets.only(bottom: 8),
     child: Text(
       text,
+      textAlign: TextAlign.justify,
       style: TextStyle(
         fontSize: fontsizenumber,
         height: 1.5,

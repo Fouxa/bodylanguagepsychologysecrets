@@ -1,6 +1,7 @@
 
  import 'package:bodylanguagepsychologysecrets/homepagelearn/model/category.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
  import 'package:cached_network_image/cached_network_image.dart';
@@ -86,54 +87,74 @@ import '../settings_page.dart';
                         Container(
 
                           padding: EdgeInsets.all(7),
-                          height: index.isEven ? height/3.1 : height/3.4,
+                          height:  height/3.8,
+                          width: height/3.8,
                           decoration: BoxDecoration(
                             border: Border.all(
                                 color: Colors.purple,
                                 width: 3
                             ),
                             borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                              image: CachedNetworkImageProvider(categories[index].image,
-                         //     errorListener: ()=> bella()
 
-                              ),
-                               fit: BoxFit.cover
-                            ),
 
                          ),
 
 
 
                                 child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
+
                                     Container(
+                                      height:  height/7.0,
+                                      width: height/7.0,
+                                      child:
+                                      Hero(
+                                        tag: categories[index],
+                                        child:
+                                      CachedNetworkImage(
+                                        fit: BoxFit.cover,
+                                        imageUrl: categories[index].image,
+                                        placeholder: (context, url) =>
+                                            SizedBox(
+
+                                              child: BlurHash(hash: "L5H2EC=PM+yV0g-mq.wG9c010J}I"),
+                                            ),
+                                        errorWidget: (context, url, error) => Icon(Icons.error),
+                                      ),
+                                      ),
+                                    ),
+
+
+
+                                    Container(
+
                                       padding: EdgeInsets.all(5),
 
 
                                         decoration: BoxDecoration(
                                           border: Border.all(
-                                              color: Theme.of(context).cardColor,
+                                              color: Colors.purple.withOpacity(0.2),
                                               width: 2
                                           ),
-                                            borderRadius: BorderRadius.circular(15.0),
-                                  color: Theme.of(context).hintColor,
+                                            borderRadius: BorderRadius.circular(10.0),
+                               //   color: Theme.of(context).hintColor,
+                                          color: Colors.purple.withOpacity(0.1),
 
 
                                   //shape: BoxShape.circle,
                                 ),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.end,
                                         children: [
                                           Text(
                                             categories[index].name,
-                                            style: GoogleFonts.comicNeue(fontSize: 20,color: Theme.of(context).iconTheme.color,fontWeight: FontWeight.bold),
+                                            style: GoogleFonts.comicNeue(fontSize: height/40,color: Theme.of(context).iconTheme.color,fontWeight: FontWeight.bold),
                                           ),
-                                          Text(
+                                       /*   Text(
                                             '${categories[index].numOfCourses} Lessons',//66, 66, 66
                                             style: GoogleFonts.comicNeue(fontSize: 14,color: Theme.of(context).iconTheme.color,fontWeight: FontWeight.bold),
-                                          )
+                                          )*/
                                         ],
                                       ),
                                     ),

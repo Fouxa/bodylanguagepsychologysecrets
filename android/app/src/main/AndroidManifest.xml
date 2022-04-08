@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bodylanguagepsychologysecrets">
+    package="com.fouxa.bodylanguagepsychologysecrets">
    <application
         android:label="bodylanguagepsychologysecrets"
         android:icon="@mipmap/ic_launcher">

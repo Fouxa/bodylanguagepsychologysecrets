@@ -40,6 +40,10 @@ dependencies:
   shared_preferences:
   provider:
   animated_text_kit: ^4.2.1
+  cloud_firestore: ^3.1.7
+  firebase_core:
+  change_app_package_name: ^1.0.0
+
 
 dev_dependencies:
   flutter_test:

@@ -66,6 +66,7 @@ class _settingsPage extends State<settingsPage> {
         ),
       ),
 
+
       body:
       Stack(
           children:   <Widget>[
@@ -223,25 +224,7 @@ class _settingsPage extends State<settingsPage> {
                             )
                           ],
                         ),
-                        ExpansionTile(
-                          backgroundColor: Colors.transparent,
 
-                          title: Text(
-                            'How to keep track of completed days?',
-                            style: TextStyle(
-                              fontSize: fontnumber2,
-                            ),
-                          ),
-                          children: <Widget>[
-                            ListTile(
-
-                              title: Text('Once you have finished the day the shape of the day box will change from square to circle.',
-                                style: TextStyle(
-                                  fontSize: fontnumber2,
-                                ),),
-                            )
-                          ],
-                        ),
                         ExpansionTile(
                           backgroundColor: Colors.transparent,
 
@@ -277,7 +260,7 @@ class _settingsPage extends State<settingsPage> {
 
                         ListTile(
                           title: Text(
-                            'If you are experiencing any problem with app,send e-mail to: risephilosophyofficial@gmail.com. We will respond to your problem within 12hours. ',
+                            'If you are experiencing any problem with app,send e-mail to: fouxacorp@gmail.com. We will respond to your problem within 12hours. ',
                             style: TextStyle(
                               fontSize: fontnumber2,
                             ),
@@ -301,7 +284,7 @@ class _settingsPage extends State<settingsPage> {
 
                         ListTile(
                           title: Text(
-                            'We are Rise Philosophy. Our mission is to spread good philosophical ideas using modern technology so that majority can benefit from it by implementing these ideas effectively in their life. Thank you for spending your time with us!',
+                            'We are fouxa. Our mission is to spread good ideas and education using modern technology so that majority can benefit from it by implementing these ideas effectively in their life. Thank you for spending your time with us!',
                             style: TextStyle(
                               fontSize: fontnumber2,
                             ),

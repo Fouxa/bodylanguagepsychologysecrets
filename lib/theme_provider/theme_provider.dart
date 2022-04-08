@@ -16,6 +16,8 @@ ThemeData lightTheme = ThemeData(
   backgroundColor: Colors.white,
     scaffoldBackgroundColor: Colors.white,
 
+  //tabbar color
+  indicatorColor: Colors.purple.withOpacity(0.1)
 
  );
 
@@ -42,6 +44,8 @@ ThemeData darkTheme = ThemeData(
     backgroundColor: Colors.black,
     scaffoldBackgroundColor: Colors.black,
 
+    //tabbar color
+    indicatorColor: Colors.black,
 
 
 
